@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
+   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Atrapar Limones</title>
-
+    
     <link rel="stylesheet" href="limones.css">
 </head>
 
-<body onload="iniciar()">
+<body>
 
-    <!-- Contenedor principal que hace la tarjeta blanca -->
     <div class="contenedor">
 
-        <!-- Encabezado con el título -->
-        <div class="encabezado">
-            <h1>🍋 Atrapar Limones</h1>
-            <p>Si del cielo te caen limones...</p>
-        </div>
+        <h1>🍋 Atrapar Limones 🍋</h1>
+<p> Creado por Meliza </p>
+        <p>
+            ¡Atrapa los limones antes de que lleguen al suelo!
+        </p>
 
-  <div class="canvas-contenedor">
-    <canvas id="areaJuego" width="400" height="500"></canvas>
-    <img id="imgPersonaje" src="unnamed.png" style="display: none;">
-</div>
+        <div class="informacion">
 
-        <!-- Panel de puntajes y corazones -->
-        <div class="panel">
-            <div class="puntaje">
-                <span class="texto-puntaje">PUNTAJE</span>
+            <div>
+                🏆 Puntaje:
                 <span id="txtPuntaje">0</span>
             </div>
-            <div class="puntaje">
-                <span class="texto-puntaje">VIDAS</span>
-                <span id="txtVidas">❤️❤️❤️</span>
+
+            <div>
+                ❤️ Vidas:
+                <span id="txtVidas">3</span>
             </div>
+
         </div>
 
-        <!-- Botones de control en pantalla -->
-        <div class="botones">
-            <button onclick="moverIzquierda()">
-                ⬅ Izquierda
+        <canvas
+            id="areaJuego"
+            width="600"
+            height="400">
+        </canvas>
+
+        <div class="controles">
+
+            <button id="btnIzquierda">
+                ◀ Izquierda
             </button>
 
-            <button onclick="moverDerecha()">
-                Derecha ➡
+            <button id="btnDerecha">
+                Derecha ▶
             </button>
 
-            <!-- Cambiado a iniciar() para que limpie los intervalos y reinicie de forma segura -->
-            <button onclick="iniciar()">
+            <button id="btnReiniciar">
                 🔄 Reiniciar
             </button>
+
         </div>
 
     </div>
@@ -59,5 +61,4 @@
     <script src="limones.js"></script>
 
 </body>
-
 </html>
